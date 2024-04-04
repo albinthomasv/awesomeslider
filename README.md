@@ -51,7 +51,7 @@ Enhance your website's visual appeal and user experience with our custom slider 
 <script type="text/javascript" src="awesomeslider.min.js"></script>
     <script>
         var slider = new AwesomeSlider();
-        slider.init({ selector: 'photo', visibleItem: 4, nextBtnClass: "next", previousBtnClass: 'prev', lightbox: true, autoPlay:true,delay: 2 });
+        slider.init({ selector: '.photo', visibleItem: 4, nextBtnClass: "next", previousBtnClass: 'prev', lightbox: true, autoPlay:true,delay: 2 });
 
 </script>
 ```
