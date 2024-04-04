@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FFF;
+            display: grid;
+            place-items: center;
+            height: 100svh;
+        }
+
+        .photo-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .photo {
+            border-radius: 18px;
+            overflow: hidden;
+            width: auto;
+            height: auto;
+            max-height: 100vh;
+            max-width: 100vw;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &:hover::after {
+                left: 100%;
+                opacity: 0.15;
+                transition: inset 1s;
+            }
+
+
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 999999;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photo-wrapper" id="photoWrapper">
+        <div class="photo-container">
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured?dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured??dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured???dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured????dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured?????dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured??????dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured???????dog">
+            </div>
+            <div class="photo">
+                <img src="https://source.unsplash.com/featured????????dog">
+            </div>
+
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+    </div>
+    <script type="text/javascript" src="awesomeslider.min.js"></script>
+    <script>
+        var slider = new AwesomeSlider();
+        slider.init({ selector: '.photo', visibleItem: 4, nextBtnClass: "next", previousBtnClass: 'prev', lightbox: true, delay: 1 });
+
+    </script>
+</body>
+
+</html>
