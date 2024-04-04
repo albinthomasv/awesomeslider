@@ -2,7 +2,7 @@
 ![Screenshot from 2024-04-04 22-31-00](https://github.com/albinthomasv/awesomeslider/assets/87915601/cf18f8dc-3094-418a-aa4d-47ad9f8bfdee)
 
 Enhance your website's visual appeal and user experience with our custom slider script, allowing seamless navigation through captivating images and content.
-
+[Visit Demo](https://stackblitz.com/edit/awesomeslider-albin?file=index.html)
 # What you are able to do
 - Can able to customize into your own design.
 - Add/Remove slides.
